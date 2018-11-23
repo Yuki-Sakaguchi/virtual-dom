@@ -131,7 +131,7 @@ function hasChanged(a: NodeType, b: NodeType): ChangedType {
  * @param {NodeType} newNode 
  * @param {number} index 
  */
-export function updateElement(parent: HTMLElement, oldNode: NodeType, newNode: NodeType, index:number = 0): void {
+export function updateElement(parent: HTMLElement, oldNode: NodeType, newNode: NodeType, index = 0): void {
   // 古いNodeがなければ新しく作る
   if (oldNode == null) {
     parent.appendChild(createElement(newNode));
@@ -166,7 +166,7 @@ export function updateElement(parent: HTMLElement, oldNode: NodeType, newNode: N
   // 再帰的に子要素の更新を行う
   if (isVNode(oldNode) && isVNode(newNode)) {
     for (let i = 0; i < newNode.children.length || i < oldNode.children.length; i++) {
-      updateElement(target as HTMLElement, oldNode.children[i], newNode.children[i]);
+      updateElement(target as HTMLElement, oldNode.children[i], newNode.children[i], i);
     }
   }
 }
