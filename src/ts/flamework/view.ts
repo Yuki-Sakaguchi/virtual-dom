@@ -126,12 +126,12 @@ function hasChanged(a: NodeType, b: NodeType): ChangedType {
 
 /**
  * 仮想DOMの差分を検知し、リアルDOMに反映する
- * @param parent 
- * @param oldNode 
- * @param newNode 
- * @param index 
+ * @param {HTMLElement} parent 
+ * @param {NodeType} oldNode 
+ * @param {NodeType} newNode 
+ * @param {number} index 
  */
-export function updateElement(parent: HTMLElement, oldNode: NodeType, newNode: NodeType, index = 0): void {
+export function updateElement(parent: HTMLElement, oldNode: NodeType, newNode: NodeType, index:number = 0): void {
   // 古いNodeがなければ新しく作る
   if (oldNode == null) {
     parent.appendChild(createElement(newNode));

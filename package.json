@@ -4,8 +4,10 @@
   "description": "仮想DOMのフレームワークを作成する",
   "main": "index.js",
   "scripts": {
-    "build:ts": "browserify src/ts/main.ts -p [tsify] > dist/bundle.js",
-    "watch:ts": "watchify src/ts/main.ts -p [tsify] -v --debug -o dist/bundle.js"
+    "build:counter": "browserify src/ts/counter.ts -p [tsify] > dist/counter.js",
+    "watch:counter": "watchify src/ts/counter.ts -p [tsify] -v --debug -o dist/counter.js",
+    "build:todo": "browserify src/ts/todo.ts -p [tsify] > dist/todo.js",
+    "watch:todo": "watchify src/ts/todo.ts -p [tsify] -v --debug -o dist/todo.js"
   },
   "author": "",
   "license": "ISC",
