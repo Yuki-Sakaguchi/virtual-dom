@@ -1,0 +1,18 @@
+{
+  "name": "virtualdom",
+  "version": "1.0.0",
+  "description": "仮想DOMのフレームワークを作成する",
+  "main": "index.js",
+  "scripts": {
+    "build:ts": "browserify src/ts/main.ts -p [tsify] > dist/bundle.js",
+    "watch:ts": "watchify src/ts/main.ts -p [tsify] -v --debug -o dist/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "tsify": "^4.0.0",
+    "typescript": "^3.1.6",
+    "watchify": "^3.11.0"
+  }
+}
